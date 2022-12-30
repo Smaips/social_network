@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//smaips.github.io/social_network/static/css/main.d569bfbd.css",
+    "main.js": "//smaips.github.io/social_network/static/js/main.3676c635.js",
+    "static/js/787.9ead4232.chunk.js": "//smaips.github.io/social_network/static/js/787.9ead4232.chunk.js",
+    "index.html": "//smaips.github.io/social_network/index.html",
+    "main.d569bfbd.css.map": "//smaips.github.io/social_network/static/css/main.d569bfbd.css.map",
+    "main.3676c635.js.map": "//smaips.github.io/social_network/static/js/main.3676c635.js.map",
+    "787.9ead4232.chunk.js.map": "//smaips.github.io/social_network/static/js/787.9ead4232.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d569bfbd.css",
+    "static/js/main.3676c635.js"
+  ]
+}
