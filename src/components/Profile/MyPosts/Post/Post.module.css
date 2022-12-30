@@ -1,0 +1,9 @@
+.item{
+  color: rgb(8, 12, 3);
+}
+
+.item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
