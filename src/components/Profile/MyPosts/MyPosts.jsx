@@ -23,8 +23,6 @@ const MyPosts = (props) => {
 
         { postsElements }
 
-        {/* <Post message={posts[0].message} likesCount={posts[0].likesCount } />
-            <Post message={posts[1].message} likesCount={posts[1].likesCount } /> */}
       </div>
     </div>
   )

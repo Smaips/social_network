@@ -19,6 +19,10 @@ const Navbar = () => {
       <div className={s.item}>
         <a href=''>Settings</a>
       </div>
+      <div className={s.item}>
+        <a href=''>Friends</a>
+        
+      </div>
     </nav>
   )
 }
