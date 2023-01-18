@@ -3,7 +3,6 @@ import Post from './Post/Post';
 import  React  from 'react';
 
 
-
 const MyPosts = (props) => {
   
   let postsElements = props.posts
@@ -12,9 +11,10 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-      let text = newPostElement.current.value
-      alert(text)
-    }
+      let text = newPostElement.current.value;
+      props.addPost(text);
+      newPostElement.current.value = '';
+    };
   return (
     <div className={s.postsBlock}>
       <h3>My posts</h3>

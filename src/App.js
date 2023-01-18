@@ -6,21 +6,24 @@ import Dialogs from './components/Dialogs/Dialogs';
 import { Routes, Route } from 'react-router-dom';
 
 
+
 function App(props) {
-  
+
   return (
-        <div className='app-wrapper'>
-          <Header />
-          <Navbar />
-          <div className='app-wrapper-content'>
-            <Routes>
-              <Route path='/profile/*' 
-                     element={<Profile state={props.state.profilePage} />} />
-              <Route path='/dialogs/*' 
-                     element={<Dialogs state={props.state.dialogsPage} />} />
-            </Routes>
-          </div>
-        </div>
+    <div className='app-wrapper'>
+      <Header />
+      <Navbar />
+      <div className='app-wrapper-content'>
+        <Routes>
+          <Route path='/profile/*'
+            element={<Profile
+              state={props.state.profilePage}
+              addPost={props.addPost} />} />
+          <Route path='/dialogs/*'
+            element={<Dialogs state={props.state.dialogsPage} />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 
