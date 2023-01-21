@@ -1,7 +1,31 @@
 import reportWebVitals from './reportWebVitals';
-import { renderEntireTree } from './render';
-import state from './redux/state';
+import state, { subscribe } from './redux/state';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import { addPost, updateNewPostText, updateNewMessageText, sendMessage } from './redux/state';
+import { HashRouter } from 'react-router-dom';
 
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+let renderEntireTree = (state) => {
+  
+  root.render(
+    <React.StrictMode>
+      <HashRouter>
+        <App state={state} 
+             addPost={addPost} 
+             updateNewPostText={updateNewPostText}
+             sendMessage = {sendMessage}
+             updateNewMessageText={updateNewMessageText} />
+      </HashRouter>
+    </React.StrictMode>
+  );
+}
+
+subscribe(renderEntireTree);
 
 renderEntireTree(state);
 

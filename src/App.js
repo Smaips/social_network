@@ -21,7 +21,9 @@ function App(props) {
               addPost={props.addPost}
               updateNewPostText={props.updateNewPostText} />} />
           <Route path='/dialogs/*'
-            element={<Dialogs state={props.state.dialogsPage} />} />
+                 element={<Dialogs dialogsPage={props.state.dialogsPage}
+                                   sendMessage={props.sendMessage}
+                                   updateNewMessageText={props.updateNewMessageText} />} />
         </Routes>
       </div>
     </div>
