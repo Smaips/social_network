@@ -8,7 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 
 
 function App(props) {
-
+ 
   return (
     <div className='app-wrapper'>
       <Header />
@@ -17,10 +17,10 @@ function App(props) {
         <Routes>
           <Route path='/profile/*'
                  element={<Profile
-                   profilePage={props.state.profilePage}
+                   profilePage={props.state.profileReducer}
                    dispatch={props.dispatch} />} />
           <Route path='/dialogs/*'
-                 element={<Dialogs dialogsPage={props.state.dialogsPage}
+                 element={<Dialogs dialogsPage={props.state.dialogReducer}
                                    dispatch={props.dispatch} />} />
         </Routes>
       </div>
