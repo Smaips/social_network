@@ -2,13 +2,13 @@ import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
 import { Routes, Route } from 'react-router-dom';
+import DialogsConteiner from './components/Dialogs/DialogsContainer';
 
 
 
 function App(props) {
- 
+
   return (
     <div className='app-wrapper'>
       <Header />
@@ -16,12 +16,10 @@ function App(props) {
       <div className='app-wrapper-content'>
         <Routes>
           <Route path='/profile/*'
-                 element={<Profile
-                   profilePage={props.state.profileReducer}
-                   dispatch={props.dispatch} />} />
+                 element={<Profile store={props.store} />} />
           <Route path='/dialogs/*'
-                 element={<Dialogs dialogsPage={props.state.dialogReducer}
-                                   dispatch={props.dispatch} />} />
+                 element={<DialogsConteiner dialogsPage={props.state.dialogReducer}
+                                            dispatch={props.dispatch} />} />
         </Routes>
       </div>
     </div>
