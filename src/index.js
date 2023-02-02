@@ -5,16 +5,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { HashRouter } from 'react-router-dom';
+import StoreContext, { Provider } from './StoreContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 let renderEntireTree = (state) => {
-  
+
   root.render(
     <React.StrictMode>
       <HashRouter>
-        <App store={store} state={state} dispatch={store.dispatch.bind(store)} />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </HashRouter>
     </React.StrictMode>
   );
@@ -22,7 +25,7 @@ let renderEntireTree = (state) => {
 
 renderEntireTree(store.getState());
 
-store.subscribe( () => {
+store.subscribe(() => {
   let state = store.getState();
   renderEntireTree(state);
 });
