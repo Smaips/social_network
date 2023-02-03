@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import { Routes, Route } from 'react-router-dom';
-import DialogsConteiner from './components/Dialogs/DialogsContainer';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 
 
@@ -18,7 +18,7 @@ function App(props) {
           <Route path='/profile/*'
                  element={<Profile />} />
           <Route path='/dialogs/*'
-                 element={<DialogsConteiner />} />
+                 element={<DialogsContainer />} />
         </Routes>
       </div>
     </div>

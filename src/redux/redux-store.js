@@ -3,8 +3,8 @@ import profileReducer from './profile-reducer';
 import dialogReducer from './dialogs-reducer';
 
 let reducers = combineReducers({
-    profileReducer: profileReducer,
-    dialogReducer: dialogReducer,
+    profilePage: profileReducer,
+    dialogsPage: dialogReducer,
 });
 
 let store = createStore(reducers);

@@ -5,12 +5,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { HashRouter } from 'react-router-dom';
-import StoreContext, { Provider } from './StoreContext';
+import { Provider } from 'react-redux';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let renderEntireTree = (state) => {
+let renderEntireTree = () => {
 
   root.render(
     <React.StrictMode>
@@ -23,11 +23,10 @@ let renderEntireTree = (state) => {
   );
 }
 
-renderEntireTree(store.getState());
+renderEntireTree();
 
 store.subscribe(() => {
-  let state = store.getState();
-  renderEntireTree(state);
+  renderEntireTree();
 });
 
 // If you want to start measuring performance in your app, pass a function
